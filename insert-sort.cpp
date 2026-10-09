@@ -1,4 +1,3 @@
-//Problem: Insertion of an element at a given position and sorting the array in ascending Order.
 #include <iostream>
 using namespace std;
 
@@ -6,6 +5,11 @@ int main() {
     int n;
     cout << "Enter array size: ";
     cin >> n;
+
+    if (n < 1 || n > 100) {
+        cout << "Invalid array size! (1-100 allowed)" << endl;
+        return 0;
+    }
 
     int arr[101]; // extra slot so one insertion is always safe
     cout << "Enter array elements: ";
@@ -26,7 +30,6 @@ int main() {
     cout << "Enter target position value: ";
     cin >> value;
 
-    // shift elements right to make room
     for (int i = n; i >= pos; i--) {
         arr[i] = arr[i - 1];
     }
@@ -39,7 +42,6 @@ int main() {
     }
     cout << endl;
 
-    // bubble sort
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
@@ -55,6 +57,5 @@ int main() {
         cout << arr[i] << " ";
     }
     cout << endl;
-
     return 0;
 }

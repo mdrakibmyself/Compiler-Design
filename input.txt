@@ -1,0 +1,10 @@
+#include <iostream>
+//Single-line Comment
+int main() {
+    int a = 5;
+    int b = 10;
+    int sum = a + b;
+    /* Multiline Comment */
+    std::cout << "The sum is: " << sum << std::endl;
+    return 0;
+}
